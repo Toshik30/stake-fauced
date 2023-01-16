@@ -1,0 +1,29 @@
+{
+    "menu": [
+        {
+            "text": "How to get",
+            "href": "#howtoget",
+            "type": "anchor"
+        },
+        {
+            "text": "About",
+            "href": "#about",
+            "type": "anchor"
+        },
+        {
+            "text": "Statistics",
+            "href": "#statistics",
+            "type": "anchor"
+        },
+        {
+            "text": "Reviews",
+            "href": "#reviews",
+            "type": "anchor"
+        },
+        {
+            "text": "FAQ",
+            "href": "#faq",
+            "type": "anchor"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+$white: #ffffff;
+$gray: #505982;
+$blue: #2F3FDE;
+$red: #F6465D;
+$blue-gradient: #3D2FDE;
+$purple-gradient: #B32DE2;
+$black-gradient: #00000033;
+
+$form-bg-color: #23224a99;
+$form-gray-color: #292854b3;
+$primary-bg-color: #1D1B3F;
+$dark-bg-color: #23224A;
+$primary-gradient: linear-gradient(60.72deg, $blue-gradient 1.97%, $purple-gradient);
+
+$hover-big-btn:  linear-gradient(0deg, $black-gradient, $black-gradient), $primary-gradient;
+$hover-small-btn: #505982;;
+
+$primary-blur: blur(9.5px);
+
+$bdrd-small: 5px;
+$bdrd-primary: 10px;
+$bdrd-round: 25px;
+
+$h1-font-size: 40px;
+$h2-font-size: 36px;
+$h3-font-size: 32px;
+$h4-font-size: 24px;
+$fz-btn: 22px;
+$fz-storng: 20px;
+$fz-middle: 18px;
+$fz-primary: 16px;
+
+$phone: 480;
+$phablet: 576;
+$tablet: 768;
+$tablet-large: 992;
+$laptop: 1200;
+$desktop: 1400;
+
+%flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
