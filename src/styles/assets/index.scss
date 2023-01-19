@@ -1,0 +1,88 @@
+@import './variables.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    cursor: url(../assets/images/icons/Cursor.svg), auto;
+}
+body {
+    color: $gray;
+    font-size: $fz-primary;
+}
+html {
+    background: $primary-bg-color;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style-type: none;
+}
+button, a {
+    cursor: url(../assets/images/icons/HandPointing.svg), pointer;
+}
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 25px;
+}
+.flex {
+    display: flex;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+h1,h2,h3,h4 {
+    color: $white;
+    font-weight: 500;
+}
+h1 {
+    font-size: $h1-font-size;
+    line-height: 60px;
+}
+h2 {
+    font-size: $h2-font-size;
+}
+h3 {
+    font-size: $h3-font-size;
+}
+h4 {
+    font-size: $h4-font-size;
+}
+.white {
+    color: $white;
+}
+.gray {
+    color: $gray;
+}
+.btn {
+    background: $primary-gradient;
+    color:$white;
+    border-radius: $bdrd-primary;
+    font-size: $fz-btn;
+    line-height: 33px;
+    padding: 15px 40px;
+    
+    &.small {
+        font-size: $fz-middle;
+        padding: 10px 30px;
+        line-height: 27px;
+    }
+}
+.startNow {
+    &::nth-child(1) {
+        cursor: url(../../styles/assets/images/icons/HandPointing.svg), pointer;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: $primary-gradient;
+        color: white;
+    }
+}

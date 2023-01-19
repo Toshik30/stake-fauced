@@ -1,0 +1,23 @@
+@import '../../styles/assets/variables.scss';
+.header {
+    background: $dark-bg-color;
+    padding: $fz-primary 0px;
+    .logo {
+        color: $white;
+    }
+    .nav {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        font-size: $fz-middle;
+    }
+    ul {
+        display: flex;
+        li {
+            margin-right: 40px;
+        }
+    }
+}
+.navigation {
+    @extend %flex-between;
+}

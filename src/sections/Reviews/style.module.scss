@@ -1,0 +1,9 @@
+@import '../../styles/assets/variables.scss';
+.reviews {
+    padding: 100px 0px;
+    .customSlide {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px !important; 
+    }
+}

@@ -19,6 +19,7 @@
     "paths": {
       "@styles/*": ["src/styles/*"],
       "@components/*": ["src/components/*"],
+      "@sections/*": ["src/sections/*"],
     }
   },
   "include":  ["**/*.ts", "**/*.tsx"],

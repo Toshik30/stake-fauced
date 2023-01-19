@@ -1,0 +1,23 @@
+@import '../../styles/assets/variables.scss';
+
+.promoution {
+    padding-top: 72px;
+    margin-bottom: 70px;
+    @extend %flex-between;
+    &__text {
+        h2 {
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 30px;
+            max-width: 490px;
+            font-size: $h4-font-size;
+        }
+    }
+    &__img {
+        max-width: 390px;
+        width: 100%;
+        height: 390px;
+        background: url(../../styles/assets/images/ph.png) center;
+    }
+}

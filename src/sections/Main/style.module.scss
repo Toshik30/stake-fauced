@@ -1,0 +1,82 @@
+@import '../../styles/assets/variables.scss';
+
+.main {
+    padding: 80px 0px;
+    &__text {
+        max-width: 570px;
+        width: 100%;
+        p {
+            font-size: $fz-storng;
+            padding: 15px 0px 40px;
+        }
+    }
+    &__ctn {
+        background: $form-bg-color;
+        border-radius: $bdrd-round;
+        letter-spacing: 1px;
+        padding: 30px 40px;
+        position: relative;
+        text-align: center;
+        height: fit-content;
+        &:before {
+            content: '';
+            background: url(../../styles/assets/images/topCoin.png) center center;
+            background-size: contain;
+            position: absolute;
+            width: 134px;
+            height: 134px;
+            top: -60px;
+            right: -50px;
+        }
+        &:after {
+            content: '';
+            background: url(../../styles/assets/images/bottomCoin.png) center center;
+            background-size: contain;
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            left: -70px;
+            bottom: -60px;
+        }
+        p {
+            font-size: $fz-middle;
+            margin-bottom: 5px;
+        }
+    }
+}
+.blurRound {
+    width: 120px;
+    height: 120px;
+    filter: $blur50;
+    z-index: -1;
+    position: absolute;
+    border-radius: 100%;
+    &.top {
+        top: -30px;
+        left: -30px;
+        background: $blue-gradient;
+    }
+    &.bottom {
+        bottom: -30px;
+        right: -30px;
+        background: $primary-gradient;
+        
+    }
+}
+.countDown {
+    font-size: $h1-font-size;
+    margin: 18px 0px 30px;
+    & > span {
+        background: $form-gray-color;
+        padding: 18px 19px;
+        border-radius: $bdrd-round;
+        margin: 0px 10px;
+        &:nth-child(2) {
+            margin-right: 30px;
+        }
+        &:nth-child(3) {
+            margin-left: 30px;
+        }
+    }
+    
+}

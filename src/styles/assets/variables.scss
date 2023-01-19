@@ -11,11 +11,12 @@ $form-gray-color: #292854b3;
 $primary-bg-color: #1D1B3F;
 $dark-bg-color: #23224A;
 $primary-gradient: linear-gradient(60.72deg, $blue-gradient 1.97%, $purple-gradient);
-
+$blue-gradient : linear-gradient(45.97deg, rgba(71, 217, 250, 0.82) 10.25%, rgba(45, 171, 242, 0.82) 92.73%);
 $hover-big-btn:  linear-gradient(0deg, $black-gradient, $black-gradient), $primary-gradient;
-$hover-small-btn: #505982;;
+$hover-small-btn: #505982;
 
 $primary-blur: blur(9.5px);
+$blur50: blur(50px);
 
 $bdrd-small: 5px;
 $bdrd-primary: 10px;
