@@ -1,9 +1,39 @@
 @import '../../styles/assets/variables.scss';
 .reviews {
-    padding: 100px 0px;
+    padding: 100px 0px 0px;
     .customSlide {
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 400px !important; 
+        background-repeat: no-repeat !important;
+        border-radius: $bdrd-round;
+        background-size: cover !important;
+        transition: .5s height;
+        display: flex;
+        align-items: flex-end;
+        padding: 30px 20px;
+      
+        &__ctn {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: $white;
+            font-weight: 500;
+            p {
+                opacity: .5;
+                margin: 15px 0px;
+            }
+            button {
+                border: 2px solid $gray;
+                border-radius: $bdrd-round;
+                padding: 12px 30px;
+                background: transparent;
+                color: $white;
+                font-size: $fz-primary;
+            }
+        }
+    }
+    h2 {
+        position: absolute;
+        top: 0;
     }
 }

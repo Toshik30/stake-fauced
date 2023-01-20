@@ -56,3 +56,8 @@ export type Reviews = {
     btnText: string,
     slide: Array <{name: string, description: string,src1: any}> 
 }
+export type FAQ = {
+    heading: string,
+    description: string
+}
+export type Accordion = Array<{ name: string, content: string}>

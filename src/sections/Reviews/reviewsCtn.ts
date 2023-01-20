@@ -20,7 +20,8 @@ export const REVIEWS_CTN: Reviews = {
             name: "Albert Dera",
             description: "“Better payouts and more ways to earn than any other fauset site I’ve tried. Very fast payments. Would reccomend!”",
             src1: slide3
-        } 
+        },
+       
     ]
 }
     

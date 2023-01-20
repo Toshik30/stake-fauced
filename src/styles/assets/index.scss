@@ -86,3 +86,37 @@ h4 {
         color: white;
     }
 }
+.swiper-wrapper {
+    align-items: flex-end;
+    height: 534px !important; 
+    padding: 30px 0px;
+    position: relative;
+}
+.swiper-slide {
+    max-width: 390px !important;
+    width: 100% !important;
+    height: 443px !important;
+    
+    &.swiper-slide-next {
+        height: 480px !important;
+       
+    }
+}
+.swiper-button-prev, .swiper-button-next {
+    top: 25px !important;
+    width: 50px !important; 
+    height: 50px !important;
+    background: $form-bg-color;
+    color: $gray !important;
+    border-radius: $bdrd-small;
+    padding: 15px;
+    font-weight: 800;
+    &::after {
+        font-size: 18px !important;
+    }
+}
+.swiper-button-prev {
+    left: auto !important;
+    right: 7
+    5px !important;
+}
