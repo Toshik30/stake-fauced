@@ -1,0 +1,100 @@
+@import '../../styles/assets/variables.scss';
+@import '../../styles/assets/mixins.scss';
+
+.faq {
+    padding-bottom: 150px;
+    @include xs {
+        padding-bottom: 50px;
+        margin-top: 20px;
+    }
+    &__ctn {
+        display: flex;
+        flex-wrap: wrap;
+        &__text {
+            flex: 2;
+            @include xs {
+                flex: auto;
+                text-align: center;
+            }
+            @include lmd {
+                flex: 1 1 auto;
+                width: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            h1 {
+                font-size: $fz-faq;
+                margin-bottom: 20px;
+                max-width: 353px;
+                @include xs {
+                    font-size: $fz-middle;
+                    max-width: 146px;
+                    margin: 0px auto 20px;
+                }
+                span {
+                    font-weight: 600;
+                    background: $primary-gradient;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            p {
+                font-size: $fz-storng;
+                max-width: 470px;
+                @include xs {
+                    font-size: 14px;
+                }
+            }
+        }
+        &__accordion {
+            flex: 2;
+        }
+    }
+}
+
+.accordion {
+    &__item {
+        padding: 30px 0px;
+        border-bottom-width: 2px;
+        border-image-slice: 1;
+        border-bottom-style: solid;
+        border-image-source: radial-gradient(circle, #292854B2 24%, rgba(0,0,0,0) 80%);
+        @include xs {
+            padding: 24px 0px;
+        }
+    }
+    &__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__content {
+        line-height: 24px;
+        padding-top: 12px;
+        @include xs {
+            font-size: 14px;
+        }
+    }
+    
+}
+.arrow {
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    border-image-slice: 1;
+    border-color: $white;
+    transition: transform .2s linear;
+    transform: rotate(45deg);
+    cursor: url(../../styles/assets/images/icons/HandPointing.svg), pointer;
+ 
+    &:hover {
+        border-image-source: $primary-gradient;
+    }
+    &__active {
+        transition: transform .2s linear;
+        transform: rotate(225deg);
+    }
+}

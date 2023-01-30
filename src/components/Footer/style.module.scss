@@ -1,0 +1,100 @@
+@import '../../styles/assets/variables.scss';
+@import '../../styles/assets/mixins.scss';
+
+.footer {
+    padding: 50px 0px;
+    background: $form-gray-color;
+    @include xs {
+        padding: 48px 0px;
+    }
+    &__ctn {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.13);
+    }
+    h3 {
+        text-align: center;
+    }
+    .nav {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0px 35px;
+        @include xs {
+            order: 2;
+        }
+        ul {
+            display: flex;
+            @include xs {
+                flex-direction: column;
+                align-items: center;
+            }
+            li {
+                margin: 0px 20px;
+                @include xs {
+                    margin-bottom: 15px;
+                }
+                &:hover {
+                    background: $primary-gradient;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+    .socialMedia {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 35px;
+        margin: 20px 0px 35px;
+        @include xs {
+            order: 1;
+            padding-bottom: 0px;
+            margin: 20px 0px 0px;
+        }
+        &__item {
+            width: 32px;
+            height: 32px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            margin: 0px 10px;
+            cursor: url(../../styles/assets/images/icons/HandPointing.svg), pointer;
+            &:nth-child(1) {
+                background: url(../../styles/assets/images/icons/TwitterLogo.png);
+                &:hover {
+                    background: url(../../styles/assets/images/icons/TwitterLogoColor.png);
+                }
+            }
+            &:nth-child(2) {
+                background: url(../../styles/assets/images/icons/InstagramLogo.png);
+                &:hover {
+                    background: url(../../styles/assets/images/icons/InstagramLogoColor.png);
+                }
+            }
+            &:nth-child(3) {
+                background: url(../../styles/assets/images/icons/FacebookLogo.png);
+                &:hover {
+                    background: url(../../styles/assets/images/icons/FaceBookLogoColor.png);
+                }
+            }
+        }
+    }
+    .created {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 35px;
+        @include xs {
+            justify-content: center;
+            padding-top: 32px;
+        }
+        @include xs {
+            p {
+                &:nth-child(1) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

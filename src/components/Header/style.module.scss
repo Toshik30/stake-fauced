@@ -1,20 +1,108 @@
 @import '../../styles/assets/variables.scss';
+@import '../../styles/assets/mixins.scss';
 .header {
     background: $dark-bg-color;
     padding: $fz-primary 0px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+   
     .logo {
         color: $white;
+        &:hover {
+            background: $primary-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h4 {
+            @include xs {
+                font-size: $fz-middle ;
+            }
+        }
     }
     .nav {
         flex-wrap: wrap;
         display: flex;
         align-items: center;
         font-size: $fz-middle;
+        &__mobile {
+            order: 2;
+            &__burger {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 24px;
+                width: 32px;
+                height: 32px;
+                padding: 8px 5px;
+                span {
+                    width: 100%;
+                    height: 2px;
+                    border-radius: $bdrd-round;
+                    display: block;
+                    background: $white;
+                    transform-origin: 4px 0px;
+                    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+                    &:first-child {
+                        transform-origin: 0% 0%;
+                    }
+                    &:nth-last-child(2) {
+                        transform-origin: 0% 100%;
+                    }
+                }
+                &.active {
+                    span {
+                        opacity: 1;
+                        transform: rotate(45deg) translate(2px, -1px);
+                    
+                        &:nth-child(3) {
+                            transform: rotate(-45deg) translate(0px, -1px);
+                            
+                        }
+                        &:nth-last-child(2) {
+                            opacity: 0;
+                            transform: rotate(0deg) scale(0.2, 0.2);
+                        }
+                    }
+                }
+            }
+            &__menu {
+                position: absolute;
+                left: 0;
+                top: 75px;
+                padding: 24px 0px ;
+                text-align: center;
+                background: $form-gray-color;
+                backdrop-filter: blur(5px);
+                width: 100%;
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                transform: translate(-100%, 0px);
+                li {
+                    margin: 0 auto;
+                    border-bottom: 1px solid $gray;
+                    padding: 10px 0px;
+                    width: fit-content;
+                    color: $white;
+                    
+                }
+                &.active {
+                    transform: translate(0%, 0px);
+                }
+            }
+        }
     }
     ul {
         display: flex;
+        @include lmd {
+            display: none;
+        }
         li {
             margin-right: 40px;
+            &:hover {
+                background: $primary-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
     }
 }

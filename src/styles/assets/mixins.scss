@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+@mixin lmd {
+    @media (max-width: #{$tablet-large}) {
+        @content;
+    }
+}
+@mixin md {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin sm {
+    @media (max-width: #{$phablet}) {
+        @content;
+    }
+}
+@mixin xs {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}

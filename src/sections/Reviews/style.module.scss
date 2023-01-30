@@ -1,10 +1,16 @@
 @import '../../styles/assets/variables.scss';
+@import '../../styles/assets/mixins.scss';
+
 .reviews {
     padding: 100px 0px 0px;
+    @include xs {
+        padding-top: 56px;
+    }
     .customSlide {
         background-repeat: no-repeat !important;
         border-radius: $bdrd-round;
         background-size: cover !important;
+        background-position: center top !important;
         transition: .5s height;
         display: flex;
         align-items: flex-end;
@@ -21,6 +27,10 @@
             p {
                 opacity: .5;
                 margin: 15px 0px;
+                @include xs {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
             }
             button {
                 border: 2px solid $gray;
@@ -35,5 +45,10 @@
     h2 {
         position: absolute;
         top: 0;
+        @include xs {
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
     }
 }

@@ -10,7 +10,8 @@ const {heading, description, nameBtn, timerDescription, timerPromoution} =  MAIN
 const Main: FunctionComponent = () => {
     return (
         <section className={styles.main}>
-            <div className="container flex-between">
+            <div className="container">
+                <div className={styles.main__wrapper}>
                 <div className={styles.main__text}>
                     <h1 className='white'>{heading}</h1>
                     <p>{description}</p>
@@ -26,6 +27,7 @@ const Main: FunctionComponent = () => {
                     </div>
                     <div className={styles.blurRound + ' ' + styles.top}></div>
                     <div className={styles.blurRound + ' ' + styles.bottom}></div>
+                </div>
                 </div>
             </div>
         </section>

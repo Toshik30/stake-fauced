@@ -7,7 +7,7 @@ const {heading,text, text1,textBtn } = STEPS_POMOUTION
 
 const About: FunctionComponent = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id='about'>
       <div className="container">
           <div className={styles.promoution}>
               <div className={styles.promoution__text}>

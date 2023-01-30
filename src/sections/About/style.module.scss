@@ -1,18 +1,39 @@
 @import '../../styles/assets/variables.scss';
+@import '../../styles/assets/mixins.scss';
 
 .promoution {
     padding-top: 72px;
     margin-bottom: 70px;
     @extend %flex-between;
+    flex-wrap: wrap-reverse;
+    @include lmd {
+        padding-top: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        justify-content: center;
+    }
     &__text {
+        @include md {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         h2 {
             margin-bottom: 15px;
         }
         p {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             max-width: 490px;
             font-size: $h4-font-size;
+            @include md {
+                font-size: $fz-primary;
+                &:nth-child(3) {
+                    order: 4;
+                    margin-top: 15px;
+                }
+            }
         }
+      
     }
     &__img {
         max-width: 390px;

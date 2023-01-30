@@ -8,7 +8,7 @@ const {head, description, advantage, advantage1} = ABOUT_CURRENCY
 
 const HowToGet: FunctionComponent = () => {
   return (
-    <section className={styles.steps}>
+    <section className={styles.steps} id='howtoget'>
       <div className="container">
           <h3>{STEPS_CTN.heading}</h3>
           <div className={styles.steps__block}>

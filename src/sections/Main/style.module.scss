@@ -1,13 +1,37 @@
 @import '../../styles/assets/variables.scss';
+@import '../../styles/assets/mixins.scss';
 
 .main {
     padding: 80px 0px;
+    @include sm {
+        padding: 50px 0px;
+        overflow-x: hidden;
+    }
     &__text {
         max-width: 570px;
         width: 100%;
+        @include sm {
+            text-align: center;
+            margin-top: 30px;
+        }
+        @include lmd {
+            text-align: center;
+            margin-top: 50px;
+        }
         p {
             font-size: $fz-storng;
             padding: 15px 0px 40px;
+            @include sm {
+                font-size: $fz-primary;
+            }
+        }
+    }
+    &__wrapper {
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        @include md {
+            justify-content: center;
         }
     }
     &__ctn {
@@ -15,33 +39,61 @@
         border-radius: $bdrd-round;
         letter-spacing: 1px;
         padding: 30px 40px;
+        max-width: 100%;
         position: relative;
         text-align: center;
         height: fit-content;
+        @include sm {
+            padding: 30px;
+        }
+        @include lmd {
+            margin-bottom: 40px;
+        }
         &:before {
             content: '';
             background: url(../../styles/assets/images/topCoin.png) center center;
-            background-size: contain;
+            background-size: cover;
             position: absolute;
             width: 134px;
             height: 134px;
             top: -60px;
             right: -50px;
+            @include sm {
+                width: 90px;
+                height: 90px;
+                top: -40px;
+                right: -35px;
+            }
         }
         &:after {
             content: '';
             background: url(../../styles/assets/images/bottomCoin.png) center center;
-            background-size: contain;
+            background-size: cover;
             position: absolute;
             width: 140px;
             height: 140px;
             left: -70px;
             bottom: -60px;
+            @include sm {
+                width: 77px;
+                height: 77px;
+                bottom: -20px;
+                left: -25px;
+            }
         }
         p {
             font-size: $fz-middle;
             margin-bottom: 5px;
+            @include sm {
+                font-size: 14px;
+            }
+            & + span {
+                @include sm {
+                    font-size: 12px;
+                }
+            }
         }
+        
     }
 }
 .blurRound {
@@ -66,6 +118,9 @@
 .countDown {
     font-size: $h1-font-size;
     margin: 18px 0px 30px;
+    @include sm {
+        font-size: 34px ;
+    }
     & > span {
         background: $form-gray-color;
         padding: 18px 19px;
@@ -73,9 +128,19 @@
         margin: 0px 10px;
         &:nth-child(2) {
             margin-right: 30px;
+            @include sm {
+                margin-right: 20px;
+            }
         }
         &:nth-child(3) {
             margin-left: 30px;
+            @include sm {
+                margin-left: 20px;
+            }
+        }
+        @include sm {
+            padding: 16px 15px;
+            margin: 0px 8px;
         }
     }
     

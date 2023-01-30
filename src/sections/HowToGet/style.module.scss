@@ -1,4 +1,5 @@
 @import '../../styles/assets/variables.scss';
+@import '../../styles/assets/mixins.scss';
 .steps {
     h3 {
         text-align: center;
@@ -8,6 +9,11 @@
         margin-top: 30px;
         align-items: stretch;
         padding-bottom: 80px;
+        flex-wrap: wrap;
+        @include md {
+            justify-content: center;
+            padding-bottom: 0px;
+        }
         .stepBlock {
             flex: 1 1 auto;
             width: 100%;
@@ -18,6 +24,9 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @include md {
+                margin-bottom: 30px;
+            }
             p {
                 margin: 15px 0px;
                 max-width: 315px;
@@ -46,7 +55,12 @@
     .aboutCurrency {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding: 82px 0px 100px;
+        @include lmd {
+            padding: 40px 0px ;
+            justify-content: center;
+        }
         &__img {
             max-width: 450px;
             width: 100%;
@@ -54,6 +68,12 @@
             background-size: contain;
             background-repeat: no-repeat;
             position: relative;
+            @include md {
+                min-height: 295px;
+            }
+            @include lmd {
+                min-height: 380px;
+            }
             .blur {
                 width: 120px;
                 height: 120px;
@@ -64,6 +84,12 @@
                 transform-origin: 50% 200px;
                 right: calc(50% - 80px);
                 animation:  rotationAnim 4s linear 0s infinite;
+                @include md {
+                    transform-origin: 50% 150px;
+                }
+                @include lmd {
+                    transform-origin: 50% 180px;
+                }
                 &.top {
                     background: $blue-gradient;
                     animation-timing-function: ease;
@@ -77,6 +103,10 @@
         }
         &__text {
             padding: 54px 0px;
+            @include md {
+                text-align: center;
+                padding: 33px 0px 0px;
+            }
             h2 {
                 margin-bottom: 15px;
             }
@@ -86,18 +116,29 @@
                 width: 100%;
                 font-size:$h4-font-size ;
                 line-height: $h2-font-size;
+                @include md {
+                    font-size: 14px;
+                    line-height: $fz-storng;
+                    margin-bottom: 33px;
+                }
             }
+            
             &__list {
                 display: flex;
                 flex-direction: column;
+                text-align: start;
                 span {
                     font-size: $fz-middle;
                     margin-bottom: 20px;
                     display: flex;
                     align-items: center;
+                    @include md {
+                        font-size: 14px;
+                    }
                     &:before {
                         content: '';
-                        width: 44px;
+                        width: 100%;
+                        max-width: 44px;
                         height: 44px;
                         margin-right: 20px;
                         border-radius: $bdrd-small;
